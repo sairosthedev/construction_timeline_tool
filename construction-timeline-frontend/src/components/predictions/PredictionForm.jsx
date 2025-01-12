@@ -21,7 +21,7 @@ const PredictionForm = () => {
         setError('');
         setLoading(true);
         try {
-            const response = await axios.post('/api/predict', formData);
+            const response = await axios.post('/predict', formData);
             setPrediction(response.data.prediction);
         } catch (err) {
             setError('Error fetching prediction. Please try again.');
